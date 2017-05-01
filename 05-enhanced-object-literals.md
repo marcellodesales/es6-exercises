@@ -19,3 +19,21 @@
           attributeProp: "className",
           attributeValue: "active"
         }));
+
+
+```javascript
+function makeASTNode(nodeType, nodeValue, options) {
+          return {
+            nodeType,
+            nodeValue,
+            className: options.attributeValue
+          }
+        }
+        
+console.log(makeASTNode("Image", "starfish.png", {
+          attributeProp: "className",
+          attributeValue: "active"
+        }));
+ {nodeType: "Image", nodeValue: "starfish.png", className: "active"}
+
+```
