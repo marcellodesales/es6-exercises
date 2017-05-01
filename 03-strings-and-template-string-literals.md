@@ -26,7 +26,7 @@
 
 Solution
 
-```
+```javascript
 
 function escapeHTML(literals, ...substitutions) {
   let result = '';
