@@ -26,7 +26,7 @@ function makeASTNode(nodeType, nodeValue, options) {
           return {
             nodeType,
             nodeValue,
-            className: options.attributeValue
+            [options.attributeProp]: options.attributeValue
           }
         }
         
