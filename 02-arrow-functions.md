@@ -48,6 +48,14 @@
           obj.third = z;
           return obj;
         }
+        
+        const makeObj = (x, y, z) => { return {first: x, second: y, third: z}; };
+        
+        // DOES NOT COMPILE AS "{" is evaluated as a function body, that requires "return"
+        const makeObj = (x, y, z) => {first: x, second: y, third: z};
+        
+        // Evaluate an instance with an object and return the object without evaluation
+        const makeObj3 = (x, y, z) => ({first: x, second: y, third: z});
         ```
         
        
