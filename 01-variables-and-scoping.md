@@ -69,12 +69,17 @@ Uncaught SyntaxError: Missing initializer in const declaration
             callbacks[2]();
 
 ```
+Solution
+
+```
 var callbacks = []
             for (let i = 0; i < 5; i++) {
               (function(x) {
                 callbacks.push(function() { console.log(x); });
               })(i)
             }
+            
+        
             callbacks[2]()
             prints 2 :)
 ```
