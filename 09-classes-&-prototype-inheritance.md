@@ -53,7 +53,7 @@ console.log(`${myAirplane.showPlane()}`)
    3. Instantiate a new `Airplane`, ensuring that both its constructor and the superclass constructor get called.
    4. Add a method to the base class that returns `FlyingVehicle`s speed and altitude as a string. Modify `Airplane`'s '`showPlane()` method to use this string in its output.
 
-```javacript
+```javascript
 class FlyingVehicle {
   constructor(speed, altitude) {
     this.speed = speed;
@@ -92,15 +92,13 @@ export default Airplane;
 const myAirplane = new Airplane("Boing", "747", "750/MPH", "1000F")
 
 console.log(`${myAirplane.showPlane()}`)
-
-
 ```
 
 5. Create a `Helicopter` class that extends `FlyingVehicle`.
    1. Instantiate a new Helicopter.
    2. Add a `static` method to `Helicopter` that returns an array of flight controls, namely (1) the cyclic, (2) the collective, (3) the anti-torque pedals, and (4) the throttle. Ensure you can return this list without instantiating an object of the class. Can you call it from an instance?
 
-```javascritp
+```javascript
 import FlyingVehicle from './FlyingVehicle'
 
 class Helicopter extends FlyingVehicle {
