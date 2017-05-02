@@ -18,6 +18,25 @@
 1. Finally, just so we know that `delay5()` has been called,
    use `console.log` to print out `"delay5 called"`.
 
+```javascript
+// Create
+function delay5() {
+  return new Promise();
+}
+// promises take a function with 2 parameters: resolve, reject
+function delay5PromiseHandler(resolve, reject) {
+}
+
+//3
+function delay5() {
+  console.log("delay5 called");
+  return new Promise(function(resolve, reject) {
+    resolve("Timer done");
+  });
+}
+
+delay5().then(msg => console.log(`finished with ${msg}`))
+```
 
 ## Consuming (using) a Promise
 
